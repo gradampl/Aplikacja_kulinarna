@@ -12,7 +12,17 @@ namespace WebApplication1.Models
             : base(options)
         {
         }
-
+        
         public DbSet<WebApplication1.Models.Todo> Todo { get; set; }
     }
+    
+   /* public class MyDatabaseContext:DbContext
+    {
+        public DbSet<Recipe>Recipes { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;");
+        }
+    }*/
 }
