@@ -1,9 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Aplikacja_kulinarna.Migrations
 {
-    public partial class MyFirstMigration : Migration
+    public partial class RecipeDraftModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +11,7 @@ namespace Aplikacja_kulinarna.Migrations
                 columns: table => new
                 {
                     RecipeId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Sqlite:Autoincrement", true),
                     Dish = table.Column<string>(nullable: true),
                     DishRecipe = table.Column<string>(nullable: true),
                     MinutesToPrepare = table.Column<int>(nullable: false),
