@@ -2,14 +2,16 @@
 using Aplikacja_kulinarna.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Aplikacja_kulinarna.Migrations
 {
     [DbContext(typeof(CulinaryContext))]
-    partial class CulinaryContextModelSnapshot : ModelSnapshot
+    [Migration("20180725200617_SeedRecipes")]
+    partial class SeedRecipes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
