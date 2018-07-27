@@ -21,17 +21,18 @@ namespace Aplikacja_kulinarna.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            modelBuilder.Entity<Recipe>()
-             .ToTable("Recipe")
-             .Property(r => r.DishRecipe)
-             .HasMaxLength(2000);
+                .ToTable("Recipes")
+                .Property(r => r.DishRecipe)
+                .HasMaxLength(2000);           
 
-          modelBuilder.Entity<Recipe>()
+
+            modelBuilder.Entity<Recipe>()
              .HasData(
                  new Recipe()
                     {   RecipeId = 1,
-                        Dish = "Tea",
-                        DishRecipe = "Boil water and add tea",
-                        MinutesToPrepare = 3,
+                        Dish = "Chips",
+                        DishRecipe = "Peel potatoes. Cut them into thin, long sticks. Fry them.",
+                        MinutesToPrepare = 10,
                         QualityStars = 1,
                     },
 
@@ -39,17 +40,17 @@ namespace Aplikacja_kulinarna.Data
                  new Recipe()
                     {
                         RecipeId = 2,
-                        Dish = "Coffe",
-                        DishRecipe = "Boil water. Add coffe and sugar",
-                        MinutesToPrepare = 5,
+                        Dish = "Fish and chips",
+                        DishRecipe = "Prepare chips. Fry fish. Serve together",
+                        MinutesToPrepare = 20,
                         QualityStars = 2,
                     },
 
                  new Recipe()
                     {
                         RecipeId = 3,
-                        Dish = "Caffe Latte",
-                        DishRecipe = "Boil water. Add coffe. Add milk. Add sugar",
+                        Dish = "Ham sandwich",
+                        DishRecipe = "Slice bread. Put butter on its top. Add ham.",
                         MinutesToPrepare = 7,
                         QualityStars = 3,
                     }
