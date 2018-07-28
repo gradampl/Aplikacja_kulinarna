@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aplikacja_kulinarna.Migrations
 {
     [DbContext(typeof(CulinaryContext))]
-    [Migration("20180725200617_SeedRecipes")]
+    [Migration("20180728124333_SeedRecipes")]
     partial class SeedRecipes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,12 +33,12 @@ namespace Aplikacja_kulinarna.Migrations
 
                     b.HasKey("RecipeId");
 
-                    b.ToTable("Recipe");
+                    b.ToTable("Recipes");
 
                     b.HasData(
-                        new { RecipeId = 1, Dish = "Tea", DishRecipe = "Boil water and add tea", MinutesToPrepare = 3, QualityStars = 1 },
-                        new { RecipeId = 2, Dish = "Coffe", DishRecipe = "Boil water. Add coffe and sugar", MinutesToPrepare = 5, QualityStars = 2 },
-                        new { RecipeId = 3, Dish = "Caffe Latte", DishRecipe = "Boil water. Add coffe. Add milk. Add sugar", MinutesToPrepare = 7, QualityStars = 3 }
+                        new { RecipeId = 1, Dish = "Chips", DishRecipe = "Peel potatoes. Cut them into thin, long sticks. Fry them.", MinutesToPrepare = 10, QualityStars = 1 },
+                        new { RecipeId = 2, Dish = "Fish and chips", DishRecipe = "Prepare chips. Fry fish. Serve together", MinutesToPrepare = 20, QualityStars = 2 },
+                        new { RecipeId = 3, Dish = "Ham sandwich", DishRecipe = "Slice bread. Put butter on its top. Add ham.", MinutesToPrepare = 7, QualityStars = 3 }
                     );
                 });
 #pragma warning restore 612, 618
